@@ -4,13 +4,10 @@
   Details about {{ MyMember.firstname }} {{ MyMember.lastname }}
 {% endblock %}
 
-
 {% block content %}
-  <h1>{{ MyMember.firstname }} {{ MyMember.lastname }}</h1>
-  
-  <p>Phone {{ MyMember.phone }}</p>
-  <p>Member since: {{ MyMember.joined_date }}</p>
-  
-  <p>Back to <a href="/Members">Members</a></p>
-  
-{% endblock %}
+  <div class="mycard">
+    <h1>{{ MyMember.firstname }} {{ MyMember.lastname }}</h1>
+    <p>Phone {{ MyMember.phone }}</p>
+    <p>Member since: {{ MyMember.joined_date }}</p>
+  </div>
+{% endblock %}  
