@@ -26,8 +26,9 @@ def main(Request):
     return HttpResponse(templates.render())
 
 def testing(request):
-  template = loader.get_template('template.html')
-  context = {
-    'fruits': ['Apple', 'Banana', 'Cherry'],   
-  }
-  return HttpResponse(template.render(context, request))
+    mydata= Member_class.objects.all()
+    template = loader.get_template('test.html')
+    context = {
+        'MyMembers': mydata,   
+    }
+    return HttpResponse(template.render(context, request))
